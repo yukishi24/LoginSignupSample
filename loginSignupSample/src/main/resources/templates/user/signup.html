@@ -4,17 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport"
 	content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<!-- CSS読み取り -->
 <link rel="stylesheet"
 	th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
-<link rel="stylesheet" th:href="@{/css.signup.signup.css}">
-<!-- js読み込み -->
-<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
-<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
-<title>ユーザー登録画面</title>
+<link rel="stylesheet" th:href="@{/css/user/signup.css}">
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<title></title>
 </head>
 <body class="bg-light">
-	<form id="signup-form" action="/user/signup" method="post" class="form-signup">
+	<form id="signup-form" action="/user/signup" method="post"
+		class="form-signup">
 		<h1 class="text-center">ユーザー登録</h1>
 		<!-- ユーザーID -->
 		<div class="form-group">
