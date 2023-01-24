@@ -14,7 +14,7 @@
 <body class="bg-light">
 	<form id="signup-form" action="/user/signup" method="post"
 		class="form-signup">
-		<h1 class="text-center">ユーザー登録</h1>
+		<h1 class="text-center" th:text="#{user.signup.title}"></h1>
 		<!-- ユーザーID -->
 		<div class="form-group">
 			<label for="userId">ユーザーID</label> <input type="text"
