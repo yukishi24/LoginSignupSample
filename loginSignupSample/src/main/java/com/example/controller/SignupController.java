@@ -13,20 +13,19 @@ import com.example.config.messageConfig;
 @Controller
 @RequestMapping("/user")
 public class SignupController {
-  
+
   @Autowired
   private userApplicationService service;
-  private messageConfig config;
-  
+  private messageConfig messageConfig;
+
   @GetMapping("/signup")
   public String getSignup(Model model) {
-    Map<String, Integer>genderMap = service.getGenderMap();
-    String title = config.getTitle();
-    System.out.println(title);
+    String title = messageConfig.getTitle();
+    Map<String, Integer> genderMap = service.getGenderMap();
     model.addAttribute("genderMap", genderMap);
     return "user/signup";
   }
-  
+
   @PostMapping("/signup")
   public String postSignup() {
     return "redirect:/login";
