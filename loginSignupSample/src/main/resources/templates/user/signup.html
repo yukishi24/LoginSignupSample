@@ -9,12 +9,12 @@
 <link rel="stylesheet" th:href="@{/css/user/signup.css}">
 <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
 <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-<title></title>
+<title>ユーザー登録画面</title>
 </head>
 <body class="bg-light">
 	<form id="signup-form" action="/user/signup" method="post"
 		class="form-signup">
-		<h1 class="text-center" th:text="#{user.signup.title}"></h1>
+		<h1 class="text-center">ユーザー登録</h1>
 		<!-- ユーザーID -->
 		<div class="form-group">
 			<label for="userId">ユーザーID</label> <input type="text"
