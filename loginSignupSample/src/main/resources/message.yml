@@ -1,9 +1,0 @@
-signup:
-  title: ユーザー登録画面
-  btn: ユーザー登録
-  userId: ユーザーID
-  password: パスワード
-  userName: ユーザー名
-  birthday: 誕生日
-  male: 男性
-  female: 女性
