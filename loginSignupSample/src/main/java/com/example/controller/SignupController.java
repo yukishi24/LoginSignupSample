@@ -16,6 +16,7 @@ public class SignupController {
   @Autowired
   private userApplicationService service;
 
+
   @GetMapping("/signup")
   public String getSignup(Model model) {
     Map<String, Integer> genderMap = service.getGenderMap();
