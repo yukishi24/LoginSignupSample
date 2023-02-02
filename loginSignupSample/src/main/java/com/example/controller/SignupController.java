@@ -23,7 +23,14 @@ public class SignupController {
   @Autowired
   private userApplicationService service;
 
-  //ユーザー登録画面
+  /**
+   * ユーザー登録画面
+   * 
+   * @param model
+   * @param locale
+   * @param form
+   * @return
+   */
   @GetMapping("/signup")
   public String getSignup(Model model, Locale locale, @ModelAttribute SignupForm form) {
     Map<String, Integer> genderMap = service.getGenderMap(locale);
@@ -31,19 +38,26 @@ public class SignupController {
     return "user/signup";
   }
 
-  // ユーザー登録処理
+  /**
+   * ユーザー登録処理
+   * 
+   * @param model
+   * @param locale
+   * @param form
+   * @param bindingResult
+   * @return
+   */
   @PostMapping("/signup")
   public String postSignup(Model model, Locale locale, @ModelAttribute @Validated SignupForm form,
       BindingResult bindingResult) {
 
     // 入力チェック
     if (bindingResult.hasErrors()) {
-      //NG:ユーザー登録画面に戻ります。
+
+      // NG:ユーザー登録画面に戻ります。
       return getSignup(model, locale, form);
     }
-
     log.info(form.toString());
-
     return "redirect:/login";
   }
 }
